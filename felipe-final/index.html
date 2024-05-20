@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@700&family=DM+Sans:opsz,wght@9..40,600&family=Inter:wght@100;300;400;500&family=Lobster&family=Ms+Madi&family=PT+Sans:ital@1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500&family=Roboto+Condensed&family=Roboto+Slab:wght@300&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="./assets/css/global.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
+
+    <style>
+        /* Styles for the dropdown menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(50, 49, 49);
+            min-width: 160px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: black;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    
+
+
+    <!-- menu toggle -->
+    <menu id="menu">
+        <div class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Blog</a>
+                <div class="dropdown-content">
+                    <a href="./blog.html">Travel</a>
+                    <a href="./photog.html">Photography</a>
+                </div>
+            </div>
+
+            <div style="margin-top: 10px;" class="ex"><i id="ex-menu"  class="fa-brands fa-xbox"></i></div>
+        </div>
+    </menu>
+
+    <!-- header -->
+   <div class="wrapper">
+
+    <header>
+        <div class="logo">
+            <p class="title-one">MY TRAVEL BLOG</p>
+        </div>
+        <div class="menu-header">
+            <i id="menu-toggle" class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+
+    <div class="hero">
+        <div class="hero-container">
+            <div style="margin-left: 5px;" class="left-container">
+                <p style="color: white;" class="para">Hello, I'm <span style="color: gold; font-size: 1.4rem; ">FELIPE BAIÑO.</span> I'm a passionate individual with a diverse range of interests and talents. From exploring the great outdoors to delving into the pages of a captivating book, <br>
+                I thrive on experiencing the richness of life. Creativity is my fuel, whether I'm expressing myself through art, writing, or music. With a compassionate heart, I find fulfillment in lending a helping hand and connecting with others on a deep level. Curiosity is my constant companion, driving me to learn and grow in every aspect of my life.  <br>
+                I approach challenges with resilience and optimism, seeing them as opportunities for personal growth. Embracing change with open arms, I believe in the power of positivity and the endless possibilities it brings. 
+                <br>
+                 I'm excited to embark on new adventures and share meaningful experiences with those around me. In essence, I'm a dynamic individual ready to make a positive impact and leave a lasting impression wherever life takes me.</p>
+            </div>
+            <div class="right-container">
+                <img style="border-radius: 10px;" src="./assets/images/myPicture.jfif" alt="">
+            </div>
+        </div>
+    </div>
+
+
+   </div>
+
+
+
+
+
+
+
+    <script>
+        let menuShow = document.getElementById('menu')
+        document.getElementById('ex-menu').addEventListener('click', ()=> {
+            menuShow.style.left = '-200px'
+            menuShow.style.display = "none"
+        })
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            menuShow.style.display = "flex";
+            menuShow.style.left = 0;
+        });
+
+
+    </script>
+
+
+</body>
+</html>
